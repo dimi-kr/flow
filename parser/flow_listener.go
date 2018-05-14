@@ -29,8 +29,20 @@ type FlowListener interface {
 	// EnterQuestion is called when entering the question production.
 	EnterQuestion(c *QuestionContext)
 
+	// EnterAs_id is called when entering the as_id production.
+	EnterAs_id(c *As_idContext)
+
 	// EnterBlock is called when entering the block production.
 	EnterBlock(c *BlockContext)
+
+	// EnterAs is called when entering the as production.
+	EnterAs(c *AsContext)
+
+	// EnterWith is called when entering the with production.
+	EnterWith(c *WithContext)
+
+	// EnterCaption is called when entering the caption production.
+	EnterCaption(c *CaptionContext)
 
 	// EnterOp is called when entering the op production.
 	EnterOp(c *OpContext)
@@ -56,8 +68,20 @@ type FlowListener interface {
 	// ExitQuestion is called when exiting the question production.
 	ExitQuestion(c *QuestionContext)
 
+	// ExitAs_id is called when exiting the as_id production.
+	ExitAs_id(c *As_idContext)
+
 	// ExitBlock is called when exiting the block production.
 	ExitBlock(c *BlockContext)
+
+	// ExitAs is called when exiting the as production.
+	ExitAs(c *AsContext)
+
+	// ExitWith is called when exiting the with production.
+	ExitWith(c *WithContext)
+
+	// ExitCaption is called when exiting the caption production.
+	ExitCaption(c *CaptionContext)
 
 	// ExitOp is called when exiting the op production.
 	ExitOp(c *OpContext)

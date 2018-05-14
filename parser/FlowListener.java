@@ -77,6 +77,16 @@ public interface FlowListener extends ParseTreeListener {
 	 */
 	void exitQuestion(FlowParser.QuestionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FlowParser#as_id}.
+	 * @param ctx the parse tree
+	 */
+	void enterAs_id(FlowParser.As_idContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlowParser#as_id}.
+	 * @param ctx the parse tree
+	 */
+	void exitAs_id(FlowParser.As_idContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FlowParser#block}.
 	 * @param ctx the parse tree
 	 */
@@ -86,6 +96,36 @@ public interface FlowListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBlock(FlowParser.BlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlowParser#as}.
+	 * @param ctx the parse tree
+	 */
+	void enterAs(FlowParser.AsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlowParser#as}.
+	 * @param ctx the parse tree
+	 */
+	void exitAs(FlowParser.AsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlowParser#with}.
+	 * @param ctx the parse tree
+	 */
+	void enterWith(FlowParser.WithContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlowParser#with}.
+	 * @param ctx the parse tree
+	 */
+	void exitWith(FlowParser.WithContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FlowParser#caption}.
+	 * @param ctx the parse tree
+	 */
+	void enterCaption(FlowParser.CaptionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FlowParser#caption}.
+	 * @param ctx the parse tree
+	 */
+	void exitCaption(FlowParser.CaptionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link FlowParser#op}.
 	 * @param ctx the parse tree
