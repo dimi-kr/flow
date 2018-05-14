@@ -4,6 +4,7 @@
 <"Question3":q3>->["Block5":b5];
 ["Block6" as b6]-><"Question4" as q4>;
 
-<"Question5":q5> -> ["Block7"] with "caption1", ["Block8"] with "caption2";
+<"Question5":q5> -> ["Block7"], ["Block8"];
 
 ["Block10"] -> ["Block11"] with "caption3";
+<"Question10" as q10> -> ["Block12":b12] with "Yes", ["Block13" as b13] with "No";

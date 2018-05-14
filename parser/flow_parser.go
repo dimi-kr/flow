@@ -16,48 +16,47 @@ var _ = reflect.Copy
 var _ = strconv.Itoa
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 20, 104,
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 20, 100,
 	4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7,
 	4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13,
-	9, 13, 4, 14, 9, 14, 3, 2, 6, 2, 30, 10, 2, 13, 2, 14, 2, 31, 3, 2, 3,
-	2, 3, 3, 6, 3, 37, 10, 3, 13, 3, 14, 3, 38, 3, 3, 3, 3, 3, 4, 3, 4, 5,
-	4, 45, 10, 4, 3, 5, 3, 5, 3, 5, 3, 6, 3, 6, 3, 6, 6, 6, 53, 10, 6, 13,
-	6, 14, 6, 54, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 6, 6, 62, 10, 6, 13, 6, 14,
-	6, 63, 5, 6, 66, 10, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 5, 7, 74, 10,
-	7, 3, 8, 3, 8, 3, 8, 5, 8, 79, 10, 8, 3, 8, 3, 8, 3, 9, 3, 9, 3, 9, 3,
-	10, 3, 10, 3, 10, 5, 10, 89, 10, 10, 3, 10, 3, 10, 5, 10, 93, 10, 10, 3,
-	11, 3, 11, 3, 12, 3, 12, 3, 13, 3, 13, 3, 13, 3, 14, 3, 14, 3, 14, 2, 2,
-	15, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 2, 4, 3, 2, 7, 8, 3,
-	2, 10, 11, 2, 104, 2, 29, 3, 2, 2, 2, 4, 36, 3, 2, 2, 2, 6, 44, 3, 2, 2,
-	2, 8, 46, 3, 2, 2, 2, 10, 65, 3, 2, 2, 2, 12, 73, 3, 2, 2, 2, 14, 75, 3,
-	2, 2, 2, 16, 82, 3, 2, 2, 2, 18, 85, 3, 2, 2, 2, 20, 94, 3, 2, 2, 2, 22,
-	96, 3, 2, 2, 2, 24, 98, 3, 2, 2, 2, 26, 101, 3, 2, 2, 2, 28, 30, 5, 4,
-	3, 2, 29, 28, 3, 2, 2, 2, 30, 31, 3, 2, 2, 2, 31, 29, 3, 2, 2, 2, 31, 32,
-	3, 2, 2, 2, 32, 33, 3, 2, 2, 2, 33, 34, 7, 2, 2, 3, 34, 3, 3, 2, 2, 2,
-	35, 37, 5, 6, 4, 2, 36, 35, 3, 2, 2, 2, 37, 38, 3, 2, 2, 2, 38, 36, 3,
-	2, 2, 2, 38, 39, 3, 2, 2, 2, 39, 40, 3, 2, 2, 2, 40, 41, 7, 17, 2, 2, 41,
-	5, 3, 2, 2, 2, 42, 45, 5, 12, 7, 2, 43, 45, 5, 8, 5, 2, 44, 42, 3, 2, 2,
-	2, 44, 43, 3, 2, 2, 2, 45, 7, 3, 2, 2, 2, 46, 47, 5, 12, 7, 2, 47, 48,
-	5, 10, 6, 2, 48, 9, 3, 2, 2, 2, 49, 50, 5, 26, 14, 2, 50, 51, 5, 12, 7,
-	2, 51, 53, 3, 2, 2, 2, 52, 49, 3, 2, 2, 2, 53, 54, 3, 2, 2, 2, 54, 52,
-	3, 2, 2, 2, 54, 55, 3, 2, 2, 2, 55, 66, 3, 2, 2, 2, 56, 57, 5, 26, 14,
-	2, 57, 58, 5, 12, 7, 2, 58, 59, 7, 13, 2, 2, 59, 60, 5, 12, 7, 2, 60, 62,
-	3, 2, 2, 2, 61, 56, 3, 2, 2, 2, 62, 63, 3, 2, 2, 2, 63, 61, 3, 2, 2, 2,
-	63, 64, 3, 2, 2, 2, 64, 66, 3, 2, 2, 2, 65, 52, 3, 2, 2, 2, 65, 61, 3,
-	2, 2, 2, 66, 11, 3, 2, 2, 2, 67, 74, 7, 15, 2, 2, 68, 74, 7, 16, 2, 2,
-	69, 74, 7, 18, 2, 2, 70, 74, 5, 14, 8, 2, 71, 74, 5, 18, 10, 2, 72, 74,
-	7, 12, 2, 2, 73, 67, 3, 2, 2, 2, 73, 68, 3, 2, 2, 2, 73, 69, 3, 2, 2, 2,
-	73, 70, 3, 2, 2, 2, 73, 71, 3, 2, 2, 2, 73, 72, 3, 2, 2, 2, 74, 13, 3,
-	2, 2, 2, 75, 76, 7, 3, 2, 2, 76, 78, 7, 14, 2, 2, 77, 79, 5, 16, 9, 2,
-	78, 77, 3, 2, 2, 2, 78, 79, 3, 2, 2, 2, 79, 80, 3, 2, 2, 2, 80, 81, 7,
-	4, 2, 2, 81, 15, 3, 2, 2, 2, 82, 83, 5, 20, 11, 2, 83, 84, 7, 18, 2, 2,
-	84, 17, 3, 2, 2, 2, 85, 86, 7, 5, 2, 2, 86, 88, 7, 14, 2, 2, 87, 89, 5,
-	16, 9, 2, 88, 87, 3, 2, 2, 2, 88, 89, 3, 2, 2, 2, 89, 90, 3, 2, 2, 2, 90,
-	92, 7, 6, 2, 2, 91, 93, 5, 24, 13, 2, 92, 91, 3, 2, 2, 2, 92, 93, 3, 2,
-	2, 2, 93, 19, 3, 2, 2, 2, 94, 95, 9, 2, 2, 2, 95, 21, 3, 2, 2, 2, 96, 97,
-	7, 9, 2, 2, 97, 23, 3, 2, 2, 2, 98, 99, 5, 22, 12, 2, 99, 100, 7, 12, 2,
-	2, 100, 25, 3, 2, 2, 2, 101, 102, 9, 3, 2, 2, 102, 27, 3, 2, 2, 2, 12,
-	31, 38, 44, 54, 63, 65, 73, 78, 88, 92,
+	9, 13, 3, 2, 6, 2, 28, 10, 2, 13, 2, 14, 2, 29, 3, 2, 3, 2, 3, 3, 6, 3,
+	35, 10, 3, 13, 3, 14, 3, 36, 3, 3, 3, 3, 3, 4, 3, 4, 5, 4, 43, 10, 4, 3,
+	5, 3, 5, 3, 5, 3, 6, 3, 6, 3, 6, 6, 6, 51, 10, 6, 13, 6, 14, 6, 52, 3,
+	6, 3, 6, 3, 6, 3, 6, 3, 6, 6, 6, 60, 10, 6, 13, 6, 14, 6, 61, 5, 6, 64,
+	10, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 5, 7, 72, 10, 7, 3, 8, 3, 8,
+	3, 8, 5, 8, 77, 10, 8, 3, 8, 3, 8, 3, 9, 3, 9, 3, 9, 3, 10, 3, 10, 3, 10,
+	5, 10, 87, 10, 10, 3, 10, 3, 10, 5, 10, 91, 10, 10, 3, 11, 3, 11, 3, 12,
+	3, 12, 3, 12, 3, 13, 3, 13, 3, 13, 2, 2, 14, 2, 4, 6, 8, 10, 12, 14, 16,
+	18, 20, 22, 24, 2, 4, 3, 2, 7, 8, 3, 2, 10, 11, 2, 101, 2, 27, 3, 2, 2,
+	2, 4, 34, 3, 2, 2, 2, 6, 42, 3, 2, 2, 2, 8, 44, 3, 2, 2, 2, 10, 63, 3,
+	2, 2, 2, 12, 71, 3, 2, 2, 2, 14, 73, 3, 2, 2, 2, 16, 80, 3, 2, 2, 2, 18,
+	83, 3, 2, 2, 2, 20, 92, 3, 2, 2, 2, 22, 94, 3, 2, 2, 2, 24, 97, 3, 2, 2,
+	2, 26, 28, 5, 4, 3, 2, 27, 26, 3, 2, 2, 2, 28, 29, 3, 2, 2, 2, 29, 27,
+	3, 2, 2, 2, 29, 30, 3, 2, 2, 2, 30, 31, 3, 2, 2, 2, 31, 32, 7, 2, 2, 3,
+	32, 3, 3, 2, 2, 2, 33, 35, 5, 6, 4, 2, 34, 33, 3, 2, 2, 2, 35, 36, 3, 2,
+	2, 2, 36, 34, 3, 2, 2, 2, 36, 37, 3, 2, 2, 2, 37, 38, 3, 2, 2, 2, 38, 39,
+	7, 17, 2, 2, 39, 5, 3, 2, 2, 2, 40, 43, 5, 12, 7, 2, 41, 43, 5, 8, 5, 2,
+	42, 40, 3, 2, 2, 2, 42, 41, 3, 2, 2, 2, 43, 7, 3, 2, 2, 2, 44, 45, 5, 12,
+	7, 2, 45, 46, 5, 10, 6, 2, 46, 9, 3, 2, 2, 2, 47, 48, 5, 24, 13, 2, 48,
+	49, 5, 12, 7, 2, 49, 51, 3, 2, 2, 2, 50, 47, 3, 2, 2, 2, 51, 52, 3, 2,
+	2, 2, 52, 50, 3, 2, 2, 2, 52, 53, 3, 2, 2, 2, 53, 64, 3, 2, 2, 2, 54, 55,
+	5, 24, 13, 2, 55, 56, 5, 12, 7, 2, 56, 57, 7, 13, 2, 2, 57, 58, 5, 12,
+	7, 2, 58, 60, 3, 2, 2, 2, 59, 54, 3, 2, 2, 2, 60, 61, 3, 2, 2, 2, 61, 59,
+	3, 2, 2, 2, 61, 62, 3, 2, 2, 2, 62, 64, 3, 2, 2, 2, 63, 50, 3, 2, 2, 2,
+	63, 59, 3, 2, 2, 2, 64, 11, 3, 2, 2, 2, 65, 72, 7, 15, 2, 2, 66, 72, 7,
+	16, 2, 2, 67, 72, 7, 18, 2, 2, 68, 72, 5, 14, 8, 2, 69, 72, 5, 18, 10,
+	2, 70, 72, 7, 12, 2, 2, 71, 65, 3, 2, 2, 2, 71, 66, 3, 2, 2, 2, 71, 67,
+	3, 2, 2, 2, 71, 68, 3, 2, 2, 2, 71, 69, 3, 2, 2, 2, 71, 70, 3, 2, 2, 2,
+	72, 13, 3, 2, 2, 2, 73, 74, 7, 3, 2, 2, 74, 76, 7, 14, 2, 2, 75, 77, 5,
+	16, 9, 2, 76, 75, 3, 2, 2, 2, 76, 77, 3, 2, 2, 2, 77, 78, 3, 2, 2, 2, 78,
+	79, 7, 4, 2, 2, 79, 15, 3, 2, 2, 2, 80, 81, 5, 20, 11, 2, 81, 82, 7, 18,
+	2, 2, 82, 17, 3, 2, 2, 2, 83, 84, 7, 5, 2, 2, 84, 86, 7, 14, 2, 2, 85,
+	87, 5, 16, 9, 2, 86, 85, 3, 2, 2, 2, 86, 87, 3, 2, 2, 2, 87, 88, 3, 2,
+	2, 2, 88, 90, 7, 6, 2, 2, 89, 91, 5, 22, 12, 2, 90, 89, 3, 2, 2, 2, 90,
+	91, 3, 2, 2, 2, 91, 19, 3, 2, 2, 2, 92, 93, 9, 2, 2, 2, 93, 21, 3, 2, 2,
+	2, 94, 95, 7, 9, 2, 2, 95, 96, 7, 14, 2, 2, 96, 23, 3, 2, 2, 2, 97, 98,
+	9, 3, 2, 2, 98, 25, 3, 2, 2, 2, 12, 29, 36, 42, 52, 61, 63, 71, 76, 86,
+	90,
 }
 var deserializer = antlr.NewATNDeserializer(nil)
 var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
@@ -73,7 +72,7 @@ var symbolicNames = []string{
 
 var ruleNames = []string{
 	"flows", "flow", "stmt", "edge", "edge_rhs", "node", "question", "as_id",
-	"block", "as", "with", "caption", "op",
+	"block", "as", "caption", "op",
 }
 var decisionToDFA = make([]*antlr.DFA, len(deserializedATN.DecisionToState))
 
@@ -136,9 +135,8 @@ const (
 	FlowParserRULE_as_id    = 7
 	FlowParserRULE_block    = 8
 	FlowParserRULE_as       = 9
-	FlowParserRULE_with     = 10
-	FlowParserRULE_caption  = 11
-	FlowParserRULE_op       = 12
+	FlowParserRULE_caption  = 10
+	FlowParserRULE_op       = 11
 )
 
 // IFlowsContext is an interface to support dynamic dispatch.
@@ -248,22 +246,22 @@ func (p *FlowParser) Flows() (localctx IFlowsContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(27)
+	p.SetState(25)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	for ok := true; ok; ok = (((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<FlowParserT__0)|(1<<FlowParserT__2)|(1<<FlowParserTEXT)|(1<<FlowParserLINK_PREV)|(1<<FlowParserLINK_NEXT)|(1<<FlowParserID))) != 0) {
 		{
-			p.SetState(26)
+			p.SetState(24)
 			p.Flow()
 		}
 
-		p.SetState(29)
+		p.SetState(27)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
 	{
-		p.SetState(31)
+		p.SetState(29)
 		p.Match(FlowParserEOF)
 	}
 
@@ -377,22 +375,22 @@ func (p *FlowParser) Flow() (localctx IFlowContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(34)
+	p.SetState(32)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	for ok := true; ok; ok = (((_la)&-(0x1f+1)) == 0 && ((1<<uint(_la))&((1<<FlowParserT__0)|(1<<FlowParserT__2)|(1<<FlowParserTEXT)|(1<<FlowParserLINK_PREV)|(1<<FlowParserLINK_NEXT)|(1<<FlowParserID))) != 0) {
 		{
-			p.SetState(33)
+			p.SetState(31)
 			p.Stmt()
 		}
 
-		p.SetState(36)
+		p.SetState(34)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
 	{
-		p.SetState(38)
+		p.SetState(36)
 		p.Match(FlowParserEND)
 	}
 
@@ -497,20 +495,20 @@ func (p *FlowParser) Stmt() (localctx IStmtContext) {
 		}
 	}()
 
-	p.SetState(42)
+	p.SetState(40)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 2, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(40)
+			p.SetState(38)
 			p.Node()
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(41)
+			p.SetState(39)
 			p.Edge()
 		}
 
@@ -619,11 +617,11 @@ func (p *FlowParser) Edge() (localctx IEdgeContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(44)
+		p.SetState(42)
 		p.Node()
 	}
 	{
-		p.SetState(45)
+		p.SetState(43)
 		p.Edge_rhs()
 	}
 
@@ -763,55 +761,55 @@ func (p *FlowParser) Edge_rhs() (localctx IEdge_rhsContext) {
 		}
 	}()
 
-	p.SetState(63)
+	p.SetState(61)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 5, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
-		p.SetState(50)
+		p.SetState(48)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		for ok := true; ok; ok = _la == FlowParserT__7 || _la == FlowParserT__8 {
 			{
-				p.SetState(47)
+				p.SetState(45)
 				p.Op()
 			}
 			{
-				p.SetState(48)
+				p.SetState(46)
 				p.Node()
 			}
 
-			p.SetState(52)
+			p.SetState(50)
 			p.GetErrorHandler().Sync(p)
 			_la = p.GetTokenStream().LA(1)
 		}
 
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
-		p.SetState(59)
+		p.SetState(57)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 		for ok := true; ok; ok = _la == FlowParserT__7 || _la == FlowParserT__8 {
 			{
-				p.SetState(54)
+				p.SetState(52)
 				p.Op()
+			}
+			{
+				p.SetState(53)
+				p.Node()
+			}
+			{
+				p.SetState(54)
+				p.Match(FlowParserAND)
 			}
 			{
 				p.SetState(55)
 				p.Node()
 			}
-			{
-				p.SetState(56)
-				p.Match(FlowParserAND)
-			}
-			{
-				p.SetState(57)
-				p.Node()
-			}
 
-			p.SetState(61)
+			p.SetState(59)
 			p.GetErrorHandler().Sync(p)
 			_la = p.GetTokenStream().LA(1)
 		}
@@ -935,49 +933,49 @@ func (p *FlowParser) Node() (localctx INodeContext) {
 		}
 	}()
 
-	p.SetState(71)
+	p.SetState(69)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case FlowParserLINK_PREV:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(65)
+			p.SetState(63)
 			p.Match(FlowParserLINK_PREV)
 		}
 
 	case FlowParserLINK_NEXT:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(66)
+			p.SetState(64)
 			p.Match(FlowParserLINK_NEXT)
 		}
 
 	case FlowParserID:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(67)
+			p.SetState(65)
 			p.Match(FlowParserID)
 		}
 
 	case FlowParserT__0:
 		p.EnterOuterAlt(localctx, 4)
 		{
-			p.SetState(68)
+			p.SetState(66)
 			p.Question()
 		}
 
 	case FlowParserT__2:
 		p.EnterOuterAlt(localctx, 5)
 		{
-			p.SetState(69)
+			p.SetState(67)
 			p.Block()
 		}
 
 	case FlowParserTEXT:
 		p.EnterOuterAlt(localctx, 6)
 		{
-			p.SetState(70)
+			p.SetState(68)
 			p.Match(FlowParserTEXT)
 		}
 
@@ -1083,26 +1081,26 @@ func (p *FlowParser) Question() (localctx IQuestionContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(73)
+		p.SetState(71)
 		p.Match(FlowParserT__0)
 	}
 	{
-		p.SetState(74)
+		p.SetState(72)
 		p.Match(FlowParserSTRING)
 	}
-	p.SetState(76)
+	p.SetState(74)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == FlowParserT__4 || _la == FlowParserT__5 {
 		{
-			p.SetState(75)
+			p.SetState(73)
 			p.As_id()
 		}
 
 	}
 	{
-		p.SetState(78)
+		p.SetState(76)
 		p.Match(FlowParserT__1)
 	}
 
@@ -1203,11 +1201,11 @@ func (p *FlowParser) As_id() (localctx IAs_idContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(80)
+		p.SetState(78)
 		p.As()
 	}
 	{
-		p.SetState(81)
+		p.SetState(79)
 		p.Match(FlowParserID)
 	}
 
@@ -1319,35 +1317,35 @@ func (p *FlowParser) Block() (localctx IBlockContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(83)
+		p.SetState(81)
 		p.Match(FlowParserT__2)
 	}
 	{
-		p.SetState(84)
+		p.SetState(82)
 		p.Match(FlowParserSTRING)
 	}
-	p.SetState(86)
+	p.SetState(84)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == FlowParserT__4 || _la == FlowParserT__5 {
 		{
-			p.SetState(85)
+			p.SetState(83)
 			p.As_id()
 		}
 
 	}
 	{
-		p.SetState(88)
+		p.SetState(86)
 		p.Match(FlowParserT__3)
 	}
-	p.SetState(90)
+	p.SetState(88)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 	if _la == FlowParserT__6 {
 		{
-			p.SetState(89)
+			p.SetState(87)
 			p.Caption()
 		}
 
@@ -1436,7 +1434,7 @@ func (p *FlowParser) As() (localctx IAsContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(92)
+		p.SetState(90)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(_la == FlowParserT__4 || _la == FlowParserT__5) {
@@ -1445,92 +1443,6 @@ func (p *FlowParser) As() (localctx IAsContext) {
 			p.GetErrorHandler().ReportMatch(p)
 			p.Consume()
 		}
-	}
-
-	return localctx
-}
-
-// IWithContext is an interface to support dynamic dispatch.
-type IWithContext interface {
-	antlr.ParserRuleContext
-
-	// GetParser returns the parser.
-	GetParser() antlr.Parser
-
-	// IsWithContext differentiates from other interfaces.
-	IsWithContext()
-}
-
-type WithContext struct {
-	*antlr.BaseParserRuleContext
-	parser antlr.Parser
-}
-
-func NewEmptyWithContext() *WithContext {
-	var p = new(WithContext)
-	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = FlowParserRULE_with
-	return p
-}
-
-func (*WithContext) IsWithContext() {}
-
-func NewWithContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *WithContext {
-	var p = new(WithContext)
-
-	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
-
-	p.parser = parser
-	p.RuleIndex = FlowParserRULE_with
-
-	return p
-}
-
-func (s *WithContext) GetParser() antlr.Parser { return s.parser }
-func (s *WithContext) GetRuleContext() antlr.RuleContext {
-	return s
-}
-
-func (s *WithContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
-	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-func (s *WithContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(FlowListener); ok {
-		listenerT.EnterWith(s)
-	}
-}
-
-func (s *WithContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(FlowListener); ok {
-		listenerT.ExitWith(s)
-	}
-}
-
-func (p *FlowParser) With() (localctx IWithContext) {
-	localctx = NewWithContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 20, FlowParserRULE_with)
-
-	defer func() {
-		p.ExitRule()
-	}()
-
-	defer func() {
-		if err := recover(); err != nil {
-			if v, ok := err.(antlr.RecognitionException); ok {
-				localctx.SetException(v)
-				p.GetErrorHandler().ReportError(p, v)
-				p.GetErrorHandler().Recover(p, v)
-			} else {
-				panic(err)
-			}
-		}
-	}()
-
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(94)
-		p.Match(FlowParserT__6)
 	}
 
 	return localctx
@@ -1574,18 +1486,8 @@ func NewCaptionContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 
 func (s *CaptionContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *CaptionContext) With() IWithContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IWithContext)(nil)).Elem(), 0)
-
-	if t == nil {
-		return nil
-	}
-
-	return t.(IWithContext)
-}
-
-func (s *CaptionContext) TEXT() antlr.TerminalNode {
-	return s.GetToken(FlowParserTEXT, 0)
+func (s *CaptionContext) STRING() antlr.TerminalNode {
+	return s.GetToken(FlowParserSTRING, 0)
 }
 
 func (s *CaptionContext) GetRuleContext() antlr.RuleContext {
@@ -1610,7 +1512,7 @@ func (s *CaptionContext) ExitRule(listener antlr.ParseTreeListener) {
 
 func (p *FlowParser) Caption() (localctx ICaptionContext) {
 	localctx = NewCaptionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 22, FlowParserRULE_caption)
+	p.EnterRule(localctx, 20, FlowParserRULE_caption)
 
 	defer func() {
 		p.ExitRule()
@@ -1630,12 +1532,12 @@ func (p *FlowParser) Caption() (localctx ICaptionContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(96)
-		p.With()
+		p.SetState(92)
+		p.Match(FlowParserT__6)
 	}
 	{
-		p.SetState(97)
-		p.Match(FlowParserTEXT)
+		p.SetState(93)
+		p.Match(FlowParserSTRING)
 	}
 
 	return localctx
@@ -1700,7 +1602,7 @@ func (s *OpContext) ExitRule(listener antlr.ParseTreeListener) {
 
 func (p *FlowParser) Op() (localctx IOpContext) {
 	localctx = NewOpContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 24, FlowParserRULE_op)
+	p.EnterRule(localctx, 22, FlowParserRULE_op)
 	var _la int
 
 	defer func() {
@@ -1721,7 +1623,7 @@ func (p *FlowParser) Op() (localctx IOpContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(99)
+		p.SetState(95)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(_la == FlowParserT__7 || _la == FlowParserT__8) {

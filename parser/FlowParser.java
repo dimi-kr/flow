@@ -22,10 +22,10 @@ public class FlowParser extends Parser {
 	public static final int
 		RULE_flows = 0, RULE_flow = 1, RULE_stmt = 2, RULE_edge = 3, RULE_edge_rhs = 4, 
 		RULE_node = 5, RULE_question = 6, RULE_as_id = 7, RULE_block = 8, RULE_as = 9, 
-		RULE_with = 10, RULE_caption = 11, RULE_op = 12;
+		RULE_caption = 10, RULE_op = 11;
 	public static final String[] ruleNames = {
 		"flows", "flow", "stmt", "edge", "edge_rhs", "node", "question", "as_id", 
-		"block", "as", "with", "caption", "op"
+		"block", "as", "caption", "op"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -114,21 +114,21 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(27); 
+			setState(25); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(26);
+				setState(24);
 				flow();
 				}
 				}
-				setState(29); 
+				setState(27); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << TEXT) | (1L << LINK_PREV) | (1L << LINK_NEXT) | (1L << ID))) != 0) );
-			setState(31);
+			setState(29);
 			match(EOF);
 			}
 		}
@@ -172,21 +172,21 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(34); 
+			setState(32); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(33);
+				setState(31);
 				stmt();
 				}
 				}
-				setState(36); 
+				setState(34); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << TEXT) | (1L << LINK_PREV) | (1L << LINK_NEXT) | (1L << ID))) != 0) );
-			setState(38);
+			setState(36);
 			match(END);
 			}
 		}
@@ -226,20 +226,20 @@ public class FlowParser extends Parser {
 		StmtContext _localctx = new StmtContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_stmt);
 		try {
-			setState(42);
+			setState(40);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(40);
+				setState(38);
 				node();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(41);
+				setState(39);
 				edge();
 				}
 				break;
@@ -283,9 +283,9 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(44);
+			setState(42);
 			node();
-			setState(45);
+			setState(43);
 			edge_rhs();
 			}
 		}
@@ -336,25 +336,25 @@ public class FlowParser extends Parser {
 		enterRule(_localctx, 8, RULE_edge_rhs);
 		int _la;
 		try {
-			setState(63);
+			setState(61);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(50); 
+				setState(48); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(47);
+					setState(45);
 					op();
-					setState(48);
+					setState(46);
 					node();
 					}
 					}
-					setState(52); 
+					setState(50); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( _la==T__7 || _la==T__8 );
@@ -363,23 +363,23 @@ public class FlowParser extends Parser {
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(59); 
+				setState(57); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(54);
+					setState(52);
 					op();
+					setState(53);
+					node();
+					setState(54);
+					match(AND);
 					setState(55);
 					node();
-					setState(56);
-					match(AND);
-					setState(57);
-					node();
 					}
 					}
-					setState(61); 
+					setState(59); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( _la==T__7 || _la==T__8 );
@@ -427,48 +427,48 @@ public class FlowParser extends Parser {
 		NodeContext _localctx = new NodeContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_node);
 		try {
-			setState(71);
+			setState(69);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case LINK_PREV:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(65);
+				setState(63);
 				match(LINK_PREV);
 				}
 				break;
 			case LINK_NEXT:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(66);
+				setState(64);
 				match(LINK_NEXT);
 				}
 				break;
 			case ID:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(67);
+				setState(65);
 				match(ID);
 				}
 				break;
 			case T__0:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(68);
+				setState(66);
 				question();
 				}
 				break;
 			case T__2:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(69);
+				setState(67);
 				block();
 				}
 				break;
 			case TEXT:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(70);
+				setState(68);
 				match(TEXT);
 				}
 				break;
@@ -513,21 +513,21 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(73);
+			setState(71);
 			match(T__0);
-			setState(74);
+			setState(72);
 			match(STRING);
-			setState(76);
+			setState(74);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__4 || _la==T__5) {
 				{
-				setState(75);
+				setState(73);
 				as_id();
 				}
 			}
 
-			setState(78);
+			setState(76);
 			match(T__1);
 			}
 		}
@@ -567,9 +567,9 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(80);
+			setState(78);
 			as();
-			setState(81);
+			setState(79);
 			match(ID);
 			}
 		}
@@ -613,28 +613,28 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(83);
+			setState(81);
 			match(T__2);
-			setState(84);
+			setState(82);
 			match(STRING);
-			setState(86);
+			setState(84);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__4 || _la==T__5) {
 				{
-				setState(85);
+				setState(83);
 				as_id();
 				}
 			}
 
-			setState(88);
+			setState(86);
 			match(T__3);
-			setState(90);
+			setState(88);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__6) {
 				{
-				setState(89);
+				setState(87);
 				caption();
 				}
 			}
@@ -674,7 +674,7 @@ public class FlowParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(92);
+			setState(90);
 			_la = _input.LA(1);
 			if ( !(_la==T__4 || _la==T__5) ) {
 			_errHandler.recoverInline(this);
@@ -697,47 +697,8 @@ public class FlowParser extends Parser {
 		return _localctx;
 	}
 
-	public static class WithContext extends ParserRuleContext {
-		public WithContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_with; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof FlowListener ) ((FlowListener)listener).enterWith(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof FlowListener ) ((FlowListener)listener).exitWith(this);
-		}
-	}
-
-	public final WithContext with() throws RecognitionException {
-		WithContext _localctx = new WithContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_with);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(94);
-			match(T__6);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
 	public static class CaptionContext extends ParserRuleContext {
-		public WithContext with() {
-			return getRuleContext(WithContext.class,0);
-		}
-		public TerminalNode TEXT() { return getToken(FlowParser.TEXT, 0); }
+		public TerminalNode STRING() { return getToken(FlowParser.STRING, 0); }
 		public CaptionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -754,14 +715,14 @@ public class FlowParser extends Parser {
 
 	public final CaptionContext caption() throws RecognitionException {
 		CaptionContext _localctx = new CaptionContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_caption);
+		enterRule(_localctx, 20, RULE_caption);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(96);
-			with();
-			setState(97);
-			match(TEXT);
+			setState(92);
+			match(T__6);
+			setState(93);
+			match(STRING);
 			}
 		}
 		catch (RecognitionException re) {
@@ -792,12 +753,12 @@ public class FlowParser extends Parser {
 
 	public final OpContext op() throws RecognitionException {
 		OpContext _localctx = new OpContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_op);
+		enterRule(_localctx, 22, RULE_op);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(99);
+			setState(95);
 			_la = _input.LA(1);
 			if ( !(_la==T__7 || _la==T__8) ) {
 			_errHandler.recoverInline(this);
@@ -821,31 +782,31 @@ public class FlowParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24h\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\24d\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4"+
-		"\f\t\f\4\r\t\r\4\16\t\16\3\2\6\2\36\n\2\r\2\16\2\37\3\2\3\2\3\3\6\3%\n"+
-		"\3\r\3\16\3&\3\3\3\3\3\4\3\4\5\4-\n\4\3\5\3\5\3\5\3\6\3\6\3\6\6\6\65\n"+
-		"\6\r\6\16\6\66\3\6\3\6\3\6\3\6\3\6\6\6>\n\6\r\6\16\6?\5\6B\n\6\3\7\3\7"+
-		"\3\7\3\7\3\7\3\7\5\7J\n\7\3\b\3\b\3\b\5\bO\n\b\3\b\3\b\3\t\3\t\3\t\3\n"+
-		"\3\n\3\n\5\nY\n\n\3\n\3\n\5\n]\n\n\3\13\3\13\3\f\3\f\3\r\3\r\3\r\3\16"+
-		"\3\16\3\16\2\2\17\2\4\6\b\n\f\16\20\22\24\26\30\32\2\4\3\2\7\b\3\2\n\13"+
-		"\2h\2\35\3\2\2\2\4$\3\2\2\2\6,\3\2\2\2\b.\3\2\2\2\nA\3\2\2\2\fI\3\2\2"+
-		"\2\16K\3\2\2\2\20R\3\2\2\2\22U\3\2\2\2\24^\3\2\2\2\26`\3\2\2\2\30b\3\2"+
-		"\2\2\32e\3\2\2\2\34\36\5\4\3\2\35\34\3\2\2\2\36\37\3\2\2\2\37\35\3\2\2"+
-		"\2\37 \3\2\2\2 !\3\2\2\2!\"\7\2\2\3\"\3\3\2\2\2#%\5\6\4\2$#\3\2\2\2%&"+
-		"\3\2\2\2&$\3\2\2\2&\'\3\2\2\2\'(\3\2\2\2()\7\21\2\2)\5\3\2\2\2*-\5\f\7"+
-		"\2+-\5\b\5\2,*\3\2\2\2,+\3\2\2\2-\7\3\2\2\2./\5\f\7\2/\60\5\n\6\2\60\t"+
-		"\3\2\2\2\61\62\5\32\16\2\62\63\5\f\7\2\63\65\3\2\2\2\64\61\3\2\2\2\65"+
-		"\66\3\2\2\2\66\64\3\2\2\2\66\67\3\2\2\2\67B\3\2\2\289\5\32\16\29:\5\f"+
-		"\7\2:;\7\r\2\2;<\5\f\7\2<>\3\2\2\2=8\3\2\2\2>?\3\2\2\2?=\3\2\2\2?@\3\2"+
-		"\2\2@B\3\2\2\2A\64\3\2\2\2A=\3\2\2\2B\13\3\2\2\2CJ\7\17\2\2DJ\7\20\2\2"+
-		"EJ\7\22\2\2FJ\5\16\b\2GJ\5\22\n\2HJ\7\f\2\2IC\3\2\2\2ID\3\2\2\2IE\3\2"+
-		"\2\2IF\3\2\2\2IG\3\2\2\2IH\3\2\2\2J\r\3\2\2\2KL\7\3\2\2LN\7\16\2\2MO\5"+
-		"\20\t\2NM\3\2\2\2NO\3\2\2\2OP\3\2\2\2PQ\7\4\2\2Q\17\3\2\2\2RS\5\24\13"+
-		"\2ST\7\22\2\2T\21\3\2\2\2UV\7\5\2\2VX\7\16\2\2WY\5\20\t\2XW\3\2\2\2XY"+
-		"\3\2\2\2YZ\3\2\2\2Z\\\7\6\2\2[]\5\30\r\2\\[\3\2\2\2\\]\3\2\2\2]\23\3\2"+
-		"\2\2^_\t\2\2\2_\25\3\2\2\2`a\7\t\2\2a\27\3\2\2\2bc\5\26\f\2cd\7\f\2\2"+
-		"d\31\3\2\2\2ef\t\3\2\2f\33\3\2\2\2\f\37&,\66?AINX\\";
+		"\f\t\f\4\r\t\r\3\2\6\2\34\n\2\r\2\16\2\35\3\2\3\2\3\3\6\3#\n\3\r\3\16"+
+		"\3$\3\3\3\3\3\4\3\4\5\4+\n\4\3\5\3\5\3\5\3\6\3\6\3\6\6\6\63\n\6\r\6\16"+
+		"\6\64\3\6\3\6\3\6\3\6\3\6\6\6<\n\6\r\6\16\6=\5\6@\n\6\3\7\3\7\3\7\3\7"+
+		"\3\7\3\7\5\7H\n\7\3\b\3\b\3\b\5\bM\n\b\3\b\3\b\3\t\3\t\3\t\3\n\3\n\3\n"+
+		"\5\nW\n\n\3\n\3\n\5\n[\n\n\3\13\3\13\3\f\3\f\3\f\3\r\3\r\3\r\2\2\16\2"+
+		"\4\6\b\n\f\16\20\22\24\26\30\2\4\3\2\7\b\3\2\n\13\2e\2\33\3\2\2\2\4\""+
+		"\3\2\2\2\6*\3\2\2\2\b,\3\2\2\2\n?\3\2\2\2\fG\3\2\2\2\16I\3\2\2\2\20P\3"+
+		"\2\2\2\22S\3\2\2\2\24\\\3\2\2\2\26^\3\2\2\2\30a\3\2\2\2\32\34\5\4\3\2"+
+		"\33\32\3\2\2\2\34\35\3\2\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36\37\3\2\2\2"+
+		"\37 \7\2\2\3 \3\3\2\2\2!#\5\6\4\2\"!\3\2\2\2#$\3\2\2\2$\"\3\2\2\2$%\3"+
+		"\2\2\2%&\3\2\2\2&\'\7\21\2\2\'\5\3\2\2\2(+\5\f\7\2)+\5\b\5\2*(\3\2\2\2"+
+		"*)\3\2\2\2+\7\3\2\2\2,-\5\f\7\2-.\5\n\6\2.\t\3\2\2\2/\60\5\30\r\2\60\61"+
+		"\5\f\7\2\61\63\3\2\2\2\62/\3\2\2\2\63\64\3\2\2\2\64\62\3\2\2\2\64\65\3"+
+		"\2\2\2\65@\3\2\2\2\66\67\5\30\r\2\678\5\f\7\289\7\r\2\29:\5\f\7\2:<\3"+
+		"\2\2\2;\66\3\2\2\2<=\3\2\2\2=;\3\2\2\2=>\3\2\2\2>@\3\2\2\2?\62\3\2\2\2"+
+		"?;\3\2\2\2@\13\3\2\2\2AH\7\17\2\2BH\7\20\2\2CH\7\22\2\2DH\5\16\b\2EH\5"+
+		"\22\n\2FH\7\f\2\2GA\3\2\2\2GB\3\2\2\2GC\3\2\2\2GD\3\2\2\2GE\3\2\2\2GF"+
+		"\3\2\2\2H\r\3\2\2\2IJ\7\3\2\2JL\7\16\2\2KM\5\20\t\2LK\3\2\2\2LM\3\2\2"+
+		"\2MN\3\2\2\2NO\7\4\2\2O\17\3\2\2\2PQ\5\24\13\2QR\7\22\2\2R\21\3\2\2\2"+
+		"ST\7\5\2\2TV\7\16\2\2UW\5\20\t\2VU\3\2\2\2VW\3\2\2\2WX\3\2\2\2XZ\7\6\2"+
+		"\2Y[\5\26\f\2ZY\3\2\2\2Z[\3\2\2\2[\23\3\2\2\2\\]\t\2\2\2]\25\3\2\2\2^"+
+		"_\7\t\2\2_`\7\16\2\2`\27\3\2\2\2ab\t\3\2\2b\31\3\2\2\2\f\35$*\64=?GLV"+
+		"Z";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

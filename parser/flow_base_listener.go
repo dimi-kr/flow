@@ -81,12 +81,6 @@ func (s *BaseFlowListener) EnterAs(ctx *AsContext) {}
 // ExitAs is called when production as is exited.
 func (s *BaseFlowListener) ExitAs(ctx *AsContext) {}
 
-// EnterWith is called when production with is entered.
-func (s *BaseFlowListener) EnterWith(ctx *WithContext) {}
-
-// ExitWith is called when production with is exited.
-func (s *BaseFlowListener) ExitWith(ctx *WithContext) {}
-
 // EnterCaption is called when production caption is entered.
 func (s *BaseFlowListener) EnterCaption(ctx *CaptionContext) {}
 

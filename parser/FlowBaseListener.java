@@ -135,18 +135,6 @@ public class FlowBaseListener implements FlowListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWith(FlowParser.WithContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitWith(FlowParser.WithContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterCaption(FlowParser.CaptionContext ctx) { }
 	/**
 	 * {@inheritDoc}

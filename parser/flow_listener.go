@@ -38,9 +38,6 @@ type FlowListener interface {
 	// EnterAs is called when entering the as production.
 	EnterAs(c *AsContext)
 
-	// EnterWith is called when entering the with production.
-	EnterWith(c *WithContext)
-
 	// EnterCaption is called when entering the caption production.
 	EnterCaption(c *CaptionContext)
 
@@ -76,9 +73,6 @@ type FlowListener interface {
 
 	// ExitAs is called when exiting the as production.
 	ExitAs(c *AsContext)
-
-	// ExitWith is called when exiting the with production.
-	ExitWith(c *WithContext)
 
 	// ExitCaption is called when exiting the caption production.
 	ExitCaption(c *CaptionContext)

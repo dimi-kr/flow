@@ -107,16 +107,6 @@ public interface FlowListener extends ParseTreeListener {
 	 */
 	void exitAs(FlowParser.AsContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FlowParser#with}.
-	 * @param ctx the parse tree
-	 */
-	void enterWith(FlowParser.WithContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link FlowParser#with}.
-	 * @param ctx the parse tree
-	 */
-	void exitWith(FlowParser.WithContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link FlowParser#caption}.
 	 * @param ctx the parse tree
 	 */
